@@ -1,9 +1,4 @@
-h1{
-align-items: center;
-border-width: -10px;
-background-color: bisque;
-font-size: larger;
-display: flex;
-justify-content: center;
-align-items: center;
+
+*{
+  text-align: center;
 }

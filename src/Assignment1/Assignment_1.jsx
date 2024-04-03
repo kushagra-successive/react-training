@@ -5,6 +5,7 @@ import Temperature from "./Temperature";
 import Counter from "./Counter";
 import Tasklist from "./Tasklist";
 import Button from "./Button";
+import styles from "./assignment.module.css";
 const taskArray = ["Learn JS", "Learn React", "Learn Node", "Learn MongoDB"];
 const array = [
   {
@@ -24,19 +25,11 @@ const array = [
     avatarURL: "https://placebear.com/250/250",
   },
 ];
-function Assignment_1() {
+const Assignment_1 = () => {
   return (
     <>
       <Greeting />
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: "1rem",
-        }}
-      >
+      <div className={styles.greeting}>
         <UserCard info={array} />
       </div>
       <hr />
@@ -51,6 +44,6 @@ function Assignment_1() {
       <hr />
     </>
   );
-}
+};
 
 export default Assignment_1;

@@ -8,3 +8,5 @@ root.render(
     <App />
   </React.StrictMode>
 );
+//it will push whole code written inside thr src folder
+//strict mode used to show warning as well 

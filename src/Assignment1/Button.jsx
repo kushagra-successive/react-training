@@ -1,19 +1,14 @@
 import React from "react";
-import "./Button.css";
-export default function Button(props) {
-  const change = {
-    color: props.color,
-    backgroundColor: "bisque",
-    border: "3px solid black",
-    padding: "16px",
-    fontSize: "larger",
-    display: "flex",
-  };
+import styles from "./assignment.module.css";
+const Button = (props) => {
   return (
     <>
-      <div className="border">
-        <button style={change}>{props.text}</button>
+      <div className={styles.border}>
+        <button className={styles.button} style={{ color: props.color }}>
+          {props.text}
+        </button>
       </div>
     </>
   );
-}
+};
+export default Button;

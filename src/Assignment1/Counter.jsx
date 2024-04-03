@@ -1,15 +1,7 @@
 import React, { useState } from "react";
-import "./Button.css";
+import styles from "./assignment.module.css";
 
-const change = {
-  color: "pruple",
-  backgroundColor: "bisque",
-  border: "3px solid black",
-  padding: "16px",
-  fontSize: "larger",
-  display: "flex",
-};
-export default function Counter() {
+const Counter = () => {
   const [count, setCount] = useState(0);
 
   const increase = () => {
@@ -19,15 +11,16 @@ export default function Counter() {
     setCount(count - 1);
   };
   return (
-    <div className="border">
-      <button type="button" style={change} onClick={increase}>
+    <div className={styles.border}>
+      <button type="button" className={styles.button} onClick={increase}>
         Increment
       </button>
 
-      <button type="button" style={change} onClick={decrease}>
+      <button type="button" className={styles.button} onClick={decrease}>
         Decrement
       </button>
       <h2>{count}</h2>
     </div>
   );
-}
+};
+export default Counter;
