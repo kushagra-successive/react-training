@@ -3,7 +3,7 @@ import ThemeChanger from "./ThemeChanger";
 const Theme1 = createContext();
 const Theme2 = createContext();
 
-export default function ThemeProvider() {
+const ThemeProvider = () => {
   return (
     <div>
       <Theme1.Provider value={"white"}>
@@ -13,5 +13,6 @@ export default function ThemeProvider() {
       </Theme1.Provider>
     </div>
   );
-}
+};
+export default ThemeProvider;
 export { Theme1, Theme2 };

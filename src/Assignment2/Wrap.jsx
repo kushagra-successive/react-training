@@ -16,6 +16,7 @@ import EmployeeSalary from "./question16/EmployeeSalary";
 import CopyClipboard from "./question17/CopyClipboard";
 import ManageStorage from "./question18/ManageStorage";
 import Timer from "./question19/Timer";
+import Wrapper from "./question6/Wrapper";
 
 function Wrap() {
   return (
@@ -28,7 +29,7 @@ function Wrap() {
       <hr />
       <CounterWithStep />
       <hr />
-      <Clock />
+      <Wrapper />
       <hr />
       <Notification />
       <hr />

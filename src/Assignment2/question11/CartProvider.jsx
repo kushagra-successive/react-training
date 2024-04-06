@@ -7,7 +7,7 @@ const products = [
   { name: "Iphone14 📱", price: 75300 },
   { name: "Shoes 👟", price: 3000 },
 ];
-export default function CartProvider() {
+const CartProvider = () => {
   const [cart, setCart] = useState([]);
   return (
     <div>
@@ -17,4 +17,5 @@ export default function CartProvider() {
       </ProductContext.Provider>
     </div>
   );
-}
+};
+export default CartProvider;

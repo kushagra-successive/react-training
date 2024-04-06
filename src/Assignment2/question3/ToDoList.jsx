@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import styles from "../assignment.module.css";
 
-export default function ToDoList() {
+export const ToDoList=() =>{
   const [value, fetchValue] = useState();
   const [todos, addValue] = useState([]);
 
   const deleteTask = (index) => {
-    // const newarray = [...todos];
     todos.splice(index, 1);
     addValue([...todos]);
   };
@@ -49,3 +48,4 @@ export default function ToDoList() {
     </div>
   );
 }
+export default ToDoList; 

@@ -1,16 +1,10 @@
 import React, { useState } from "react";
-
-export default function CounterWithStep() {
+import styles from "../assignment.module.css";
+const CounterWithStep = () => {
   const [count, setCount] = useState(0);
   const [fetch, setFetch] = useState();
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-      }}
-    >
+    <div className={styles.div}>
       <input
         type="text"
         placeholder="Step"
@@ -22,4 +16,5 @@ export default function CounterWithStep() {
       <p>{count}</p>
     </div>
   );
-}
+};
+export default CounterWithStep;

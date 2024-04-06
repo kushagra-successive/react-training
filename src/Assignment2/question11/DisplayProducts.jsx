@@ -1,16 +1,16 @@
 import React from "react";
 import { ProductContext } from "./CartProvider";
 import { useContext } from "react";
-export default function DisplayProducts() {
+import styles from "../assignment.module.css";
+const DisplayProducts = () => {
   const { products, cart, setCart } = useContext(ProductContext);
   console.log(cart);
   return (
     <>
-      {" "}
-      <h1>Products</h1>
+      <h1 className={styles.baseline}>Products</h1>
       {products.map((element, index) => {
         return (
-          <div key={index}>
+          <div key={index} className={styles.baseline}>
             <ul>
               <li>{element.name}</li>
               <p>{element.price}</p>
@@ -22,10 +22,10 @@ export default function DisplayProducts() {
                 ADDTOCART
               </button>
             </ul>
-
           </div>
         );
       })}
     </>
   );
-}
+};
+export default DisplayProducts;

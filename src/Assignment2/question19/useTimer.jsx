@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function useTimer(time) {
+const useTimer = (time) => {
   const [count, setCount] = useState(time);
   const [run, setRun] = useState(false);
   useEffect(() => {
@@ -25,4 +25,5 @@ export default function useTimer(time) {
     setCount(25);
   }
   return { count, pause, reset, start };
-}
+};
+export default useTimer;

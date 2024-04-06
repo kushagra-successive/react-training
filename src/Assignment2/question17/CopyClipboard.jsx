@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import useClipboard from "./useClipboard";
-
-export default function CopyClipboard() {
+import styles from "../assignment.module.css";
+const CopyClipboard = () => {
   const [text, setText] = useState("");
   const { success, copyToClipboard } = useClipboard();
 
@@ -10,14 +10,7 @@ export default function CopyClipboard() {
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        fontSize: "larger",
-      }}
-    >
+    <div className={styles.div}>
       <input
         type="text"
         value={text}
@@ -26,4 +19,5 @@ export default function CopyClipboard() {
       <button onClick={copy}>{success ? "copied" : "copy"}</button>
     </div>
   );
-}
+};
+export default CopyClipboard;

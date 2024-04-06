@@ -1,6 +1,6 @@
-import React, { useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 const studentNames = ["Kushagra", "Himanshu", "Amit", "Pawan"];
-export default function StudentList() {
+const StudentList = () => {
   const [list, setList] = useState(studentNames);
   const [value, setValue] = useState("");
 
@@ -28,4 +28,5 @@ export default function StudentList() {
       })}
     </div>
   );
-}
+};
+export default StudentList;

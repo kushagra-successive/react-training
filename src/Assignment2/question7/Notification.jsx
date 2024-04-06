@@ -1,24 +1,21 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-export default function Notification() {
+const Notification = () => {
   const [message, setState] = useState("Successive Digital 🤎");
   useEffect(() => {
-    setState(message);
+    const timer = setTimeout(() => {
+      setState(""); //hiding the notification
+    }, 5000);
+
     return () => {
-      setTimeout(() => {
-        setState(" "); //hiding the notification 
-      }, 5000);
+      clearTimeout(timer);
     };
   }, [message]);
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-      }}
-    >
+    <div>
       <p style={{ color: "Brown" }}>{message}</p>
     </div>
   );
-}
+};
+export default Notification;
+//First useEffect run as component renders and prints message and after 5sec as state change it makes rerender of component and again useEffect is invoked but this time Settimeout is not work because immediately clearTimeout runs first which which clears the previous timemout and now nomore rerendering and rendering is done

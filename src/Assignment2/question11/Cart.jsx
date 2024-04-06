@@ -1,8 +1,8 @@
 import React from "react";
 import { useContext } from "react";
 import { ProductContext } from "./CartProvider";
-
-export default function Cart() {
+import styles from "../assignment.module.css";
+const Cart = () => {
   const { cart, setCart } = useContext(ProductContext);
   const remove = (index) => {
     const array = [...cart];
@@ -11,25 +11,10 @@ export default function Cart() {
   };
   return (
     <>
-      <h1
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "end",
-        }}
-      >
-        Cart:{cart.length}
-      </h1>
+      <h1 className={styles.cart}>Cart:{cart.length}</h1>
       {cart.map((element, index) => {
         return (
-          <div
-            key={index}
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "end",
-            }}
-          >
+          <div key={index} className={styles.cart}>
             <ul>
               <li>{element.name}</li>
               <p>{element.price}</p>
@@ -38,24 +23,11 @@ export default function Cart() {
           </div>
         );
       })}
-      <h2
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "end",
-        }}
-      >
-        Total:
-      </h2>
-      <h3
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "end",
-        }}
-      >
+      <h2 className={styles.cart}>Total:</h2>
+      <h3 className={styles.cart}>
         {cart.reduce((accum, element) => (accum += element.price), 0)}
       </h3>
     </>
   );
-}
+};
+export default Cart;

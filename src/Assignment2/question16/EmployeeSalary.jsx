@@ -1,11 +1,6 @@
-import React, { useMemo, useState } from "react";
-// const employeeData = [
-//   { name: "Pawan", salary: 60450 },
-//   { name: "Amit", salary: 40000 },
-//   { name: "Himanshu", salary: 59000 },
-//   { name: "Varun", salary: 64500 },
-// ];
-export default function EmployeeSalary() {
+import { useMemo, useState } from "react";
+import styles from "../assignment.module.css";
+const EmployeeSalary = () => {
   const [name1, setName1] = useState("");
   const [salary1, setSalary1] = useState("");
   const [employeeData, setEmployeeData] = useState([
@@ -36,19 +31,13 @@ export default function EmployeeSalary() {
     return average / employeeData.length;
   }, [employeeData]);
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        fontSize: "larger",
-      }}
-    >
+    <div className={styles.div}>
       <input
         type="text"
         placeholder="Enter Name"
         onChange={(e) => setName1(e.target.value)}
       />
+      <br />
       <input
         type="text"
         placeholder="Enter Salary"
@@ -59,4 +48,5 @@ export default function EmployeeSalary() {
       <h1>Average Salary:{avgSalary}</h1>
     </div>
   );
-}
+};
+export default EmployeeSalary;

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Child({ increment, count, setCount }) {
+const Child = ({ increment, count, setCount }) => {
   return (
     <div
       style={{
@@ -14,4 +14,5 @@ export default function Child({ increment, count, setCount }) {
       <button onClick={() => setCount(0)}>Reset</button>
     </div>
   );
-}
+};
+export default Child;

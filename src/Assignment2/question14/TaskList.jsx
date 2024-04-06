@@ -1,5 +1,5 @@
-import React, { useCallback, useState } from "react";
-
+import { useCallback, useState } from "react";
+import styles from "../assignment.module.css";
 const taskArray = [
   { task: "Wakeup", color: "red", button: "Complete 🙃", margin: "29px" },
   { task: "Bath", color: "red", button: "Complete 🙃", margin: "59px" },
@@ -7,7 +7,7 @@ const taskArray = [
   { task: "Office", color: "red", button: "Complete 🙃", margin: "49px" },
 ];
 
-export default function TaskList() {
+const TaskList = () => {
   const [taskDone, setTaskDone] = useState(taskArray);
   const updateStatus = useCallback(
     (index) => {
@@ -20,14 +20,7 @@ export default function TaskList() {
   );
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        fontSize: "larger",
-      }}
-    >
+    <div className={styles.div}>
       <ul>
         {taskDone.map((element, index) => (
           <li>
@@ -46,4 +39,5 @@ export default function TaskList() {
       </ul>
     </div>
   );
-}
+};
+export default TaskList;

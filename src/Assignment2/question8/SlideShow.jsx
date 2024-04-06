@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 const pathArray = [
   "./imagess/image1.jpeg",
   "./imagess/image2.jpeg",
   "./imagess/image3.jpeg",
   "./imagess/image4.jpeg",
 ];
-export default function SlideShow() {
+const SlideShow = () => {
   const [path, setPath] = useState(0);
   const [play, setPlay] = useState(false);
 
@@ -22,25 +22,13 @@ export default function SlideShow() {
     }
   }, [play, path]);
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-      }}
-    >
+    <div>
       <img src={pathArray[path]} width={300} height={400} alt="slide" />
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          gap: "4rem",
-          padding: "10px",
-        }}
-      >
+      <div>
         <button onClick={() => setPlay(true)}>Play</button>
         <button onClick={() => setPlay(false)}>Pause</button>
       </div>
     </div>
   );
-}
+};
+export default SlideShow;

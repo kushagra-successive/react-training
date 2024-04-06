@@ -1,19 +1,12 @@
 import React, { useState } from "react";
-
-export default function PersonForm() {
+const PersonForm = () => {
   const [fName, setFName] = useState();
   const [lName, setLName] = useState();
   const [age, setAge] = useState();
 
   return (
     <>
-      <form
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
+      <form>
         <input
           type="text"
           placeholder="firstName"
@@ -35,4 +28,5 @@ export default function PersonForm() {
       </form>
     </>
   );
-}
+};
+export default PersonForm;
