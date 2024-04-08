@@ -12,6 +12,7 @@ const FormValidation = () => {
     Password: "",
     ConfirmPassword: "",
   };
+  //touched is when we are are at particular box it will return boolean value .
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
     useFormik({
       initialValues,
