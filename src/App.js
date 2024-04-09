@@ -13,12 +13,10 @@ function App() {
       <Assignment1 />
       <h1>Assignment2</h1>
       <hr />
-      <Wrap />
+      <Wrap /> */}
       <h1>Assignment3</h1>
       <hr />
-      <WrapAssignment3 /> */}
-      <hr />
-      <WrapAssignment4 />
+      <WrapAssignment3 />
     </>
   );
 }
