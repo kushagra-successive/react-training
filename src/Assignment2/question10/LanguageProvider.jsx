@@ -1,25 +1,18 @@
 import React, { createContext } from "react";
 import LanguageSwitcher from "./LanguageSwitcher";
-const English = createContext();
-const Spanish = createContext();
+import { inEnglish, inSpanish } from "../data";
+const EnglishLang = createContext();
+const SpanishLang = createContext();
 const LanguageProvider = () => {
   return (
     <div>
-      <English.Provider
-        value={
-          "Hello Welcome to the world of React js where i am using useContext Hook"
-        }
-      >
-        <Spanish.Provider
-          value={
-            "Hola, bienvenido al mundo de React js donde estoy usando useContext Hook"
-          }
-        >
+      <EnglishLang.Provider value={inEnglish}>
+        <SpanishLang.Provider value={inSpanish}>
           <LanguageSwitcher />
-        </Spanish.Provider>
-      </English.Provider>
+        </SpanishLang.Provider>
+      </EnglishLang.Provider>
     </div>
   );
 };
 export default LanguageProvider;
-export { English, Spanish };
+export { EnglishLang, SpanishLang };

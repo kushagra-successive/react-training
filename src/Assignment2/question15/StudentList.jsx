@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-const studentNames = ["Kushagra", "Himanshu", "Amit", "Pawan"];
+import { studentNames } from "../data";
 const StudentList = () => {
   const [list, setList] = useState(studentNames);
   const [value, setValue] = useState("");

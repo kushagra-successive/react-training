@@ -1,14 +1,10 @@
 import { useMemo, useState } from "react";
 import styles from "../assignment.module.css";
+import {employeeSalary} from "../data"
 const EmployeeSalary = () => {
   const [name1, setName1] = useState("");
   const [salary1, setSalary1] = useState("");
-  const [employeeData, setEmployeeData] = useState([
-    { name: "Pawan", salary: 6 },
-    { name: "Amit", salary: 4 },
-    { name: "Himanshu", salary: 5 },
-    { name: "Varun", salary: 6 },
-  ]);
+  const [employeeData, setEmployeeData] = useState(employeeSalary);
 
   const modify = () => {
     const updatedEmployeeData = employeeData.map((element, index) => {

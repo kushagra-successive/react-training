@@ -1,10 +1,5 @@
 import { useEffect, useState } from "react";
-const pathArray = [
-  "./imagess/image1.jpeg",
-  "./imagess/image2.jpeg",
-  "./imagess/image3.jpeg",
-  "./imagess/image4.jpeg",
-];
+import { pathArray } from "../data";
 const SlideShow = () => {
   const [path, setPath] = useState(0);
   const [play, setPlay] = useState(false);

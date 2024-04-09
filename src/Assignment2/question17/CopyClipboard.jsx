@@ -1,11 +1,12 @@
 import { useState } from "react";
 import useClipboard from "./useClipboard";
 import styles from "../assignment.module.css";
+import { copied, copy } from "../data";
 const CopyClipboard = () => {
   const [text, setText] = useState("");
   const { success, copyToClipboard } = useClipboard();
 
-  const copy = () => {
+  const copyText = () => {
     copyToClipboard(text);
   };
 
@@ -16,7 +17,7 @@ const CopyClipboard = () => {
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
-      <button onClick={copy}>{success ? "copied" : "copy"}</button>
+      <button onClick={copyText}>{success ? copied : copy}</button>
     </div>
   );
 };

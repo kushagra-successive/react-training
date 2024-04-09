@@ -1,18 +1,20 @@
 import React, { useContext, useState } from "react";
-import { English, Spanish } from "./LanguageProvider";
+import { EnglishLang, SpanishLang } from "./LanguageProvider";
 import styles from "../assignment.module.css";
+import { English, Spanish } from "../data";
+
 const LanguageSwitcher = () => {
-  const EnglishConverted = useContext(English);
-  const SpanishConverted = useContext(Spanish);
+  const EnglishConverted = useContext(EnglishLang);
+  const SpanishConverted = useContext(SpanishLang);
 
   const [language, setLanguage] = useState(EnglishConverted);
-  const [name, setName] = useState("Spanish");
+  const [name, setName] = useState(Spanish);
 
   const changer = () => {
     language === EnglishConverted
       ? setLanguage(SpanishConverted)
       : setLanguage(EnglishConverted);
-    name === "English" ? setName("Spanish") : setName("English");
+    name === English ? setName(Spanish) : setName(English);
   };
   return (
     <div className={styles.div}>

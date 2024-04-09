@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "../assignment.module.css";
 
-export const ToDoList=() =>{
+export const ToDoList = () => {
   const [value, fetchValue] = useState();
   const [todos, addValue] = useState([]);
 
@@ -47,5 +47,5 @@ export const ToDoList=() =>{
       </div>
     </div>
   );
-}
-export default ToDoList; 
+};
+export default ToDoList;

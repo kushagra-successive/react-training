@@ -1,4 +1,3 @@
-import React from "react";
 import { ProductContext } from "./CartProvider";
 import { useContext } from "react";
 import styles from "../assignment.module.css";

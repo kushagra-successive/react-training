@@ -1,12 +1,9 @@
 import React, { createContext, useState } from "react";
 import DisplayProducts from "./DisplayProducts";
 import Cart from "./Cart";
+import { products } from "../data";
 export const ProductContext = createContext();
-const products = [
-  { name: "Jeans 👖", price: 2000 },
-  { name: "Iphone14 📱", price: 75300 },
-  { name: "Shoes 👟", price: 3000 },
-];
+
 const CartProvider = () => {
   const [cart, setCart] = useState([]);
   return (

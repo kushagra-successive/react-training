@@ -23,4 +23,4 @@ const Clock = () => {
   );
 };
 export default Clock;
-//In this only when toogle button is pressed first it changes false to true which in Wrapper it shows the component in UI mounting done then again useEffect runs first time and clock time start showing and now if we again toggle to hide it where states comes to false and now from Wrapper component it sends null means whole component will removed from DOM and unmounting done which later invoke clearInterval.
+//In this when toogle button is pressed then first it changes from false to true which inside Wrapper which shows the component in UI mounting done then again useEffect runs first time and clock time start showing and now if we again toggle to hide it where states comes to false and now from Wrapper component it sends null means whole component will removed from DOM and unmounting done which later invoke clearInterval.

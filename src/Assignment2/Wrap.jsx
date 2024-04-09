@@ -2,7 +2,6 @@ import PersonForm from "./question2/PersonForm";
 import ToDoList from "./question3/ToDoList";
 import RandomNumberGenerator from "./question4/RandomNumberGenerator";
 import CounterWithStep from "./question5/CounterWithStep";
-import Clock from "./question6/Clock";
 import Notification from "./question7/Notification";
 import SlideShow from "./question8/SlideShow";
 import ThemeProvider from "./question9/ThemeProvider";

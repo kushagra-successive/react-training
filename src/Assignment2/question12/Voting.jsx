@@ -1,7 +1,7 @@
 import React, { useReducer } from "react";
 import styles from "../assignment.module.css";
+import { initialstate, BJP, Congress, Aap } from "../data";
 const Voting = () => {
-  const initialstate = { BJP: 0, Congress: 0, Aap: 0 };
   const reducer = (state, action) => {
     switch (action.type) {
       case "BJP":
@@ -20,17 +20,17 @@ const Voting = () => {
     <div className={styles.div}>
       <ul>
         <li>
-          <button onClick={() => dispatch({ type: "BJP" })}>BJP 🚩</button>{" "}
+          <button onClick={() => dispatch({ type: BJP })}>{BJP} 🚩</button>
           <p>{state.BJP}</p>
         </li>
         <li>
-          <button onClick={() => dispatch({ type: "Congress" })}>
-            Congress 🖐️
-          </button>{" "}
+          <button onClick={() => dispatch({ type: Congress })}>
+            {Congress} 🖐️
+          </button>
           <p>{state.Congress}</p>
         </li>
         <li>
-          <button onClick={() => dispatch({ type: "Aap" })}>Aap 🧹</button>{" "}
+          <button onClick={() => dispatch({ type: Aap })}>{Aap} 🧹</button>
           <p>{state.Aap}</p>
         </li>
       </ul>

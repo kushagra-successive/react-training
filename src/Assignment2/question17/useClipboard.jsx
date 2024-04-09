@@ -8,7 +8,7 @@ const useClipboard = () => {
       navigator.clipboard.writeText(text);
       setSuccess(true);
     } catch (error) {
-      console.error("Failed to copy text: ", error);
+      console.error(error);
       setSuccess(false);
     }
   };

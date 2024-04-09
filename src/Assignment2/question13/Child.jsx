@@ -2,13 +2,7 @@ import React from "react";
 
 const Child = ({ increment, count, setCount }) => {
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-      }}
-    >
+    <div>
       <p>{count}</p>
       <button onClick={increment}>Increment</button>
       <button onClick={() => setCount(0)}>Reset</button>

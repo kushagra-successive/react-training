@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const RandomNumberGenerator = () => {
   const [random, setState] = useState(0);

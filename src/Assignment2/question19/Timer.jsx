@@ -1,7 +1,7 @@
 import useTimer from "./useTimer";
 import styles from "../assignment.module.css";
 const Timer = () => {
-  const { count, start, pause, reset } = useTimer(27);
+  const { count, start, pause, reset } = useTimer(50);
   return (
     <div className={styles.div}>
       <h1>{count}</h1>

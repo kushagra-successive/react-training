@@ -1,13 +1,14 @@
 import React, { createContext } from "react";
 import ThemeChanger from "./ThemeChanger";
+import { black, white } from "../data";
 const Theme1 = createContext();
 const Theme2 = createContext();
 
 const ThemeProvider = () => {
   return (
     <div>
-      <Theme1.Provider value={"white"}>
-        <Theme2.Provider value={"black"}>
+      <Theme1.Provider value={white}>
+        <Theme2.Provider value={black}>
           <ThemeChanger />
         </Theme2.Provider>
       </Theme1.Provider>
