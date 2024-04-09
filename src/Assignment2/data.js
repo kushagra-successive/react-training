@@ -1,5 +1,3 @@
-import EmployeeSalary from "./question16/EmployeeSalary";
-
 export const pathArray = [
   "./imagess/image1.jpeg",
   "./imagess/image2.jpeg",
@@ -41,3 +39,4 @@ export const copy = "copy";
 
 export const completed = "Completed 😃";
 export const green = "green";
+export const notification = "Successive Digital 🤎";

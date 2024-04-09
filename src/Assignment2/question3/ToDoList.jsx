@@ -37,7 +37,7 @@ export const ToDoList = () => {
           {todos.map((element, index) => {
             return (
               <>
-                <li style={{ fontSize: "larger" }}>{element}</li>
+                <li>{element}</li>
                 <input type="checkbox" />
                 <button onClick={() => deleteTask(index)}> DELETE</button>
               </>

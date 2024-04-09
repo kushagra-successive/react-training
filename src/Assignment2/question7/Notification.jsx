@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-
+import { notification } from "../data";
 const Notification = () => {
-  const [message, setState] = useState("Successive Digital 🤎");
+  const [message, setState] = useState(notification);
   useEffect(() => {
     const timer = setTimeout(() => {
       setState(""); //hiding the notification
