@@ -1,15 +1,11 @@
 import React from "react";
+import { message } from "./data.js";
 
 const Temperature = (props) => {
-  const status = () => {
-    if (props.value > 25) return "It's sunny today!🌅";
-    else return "It's cold today! ❄";
-  };
   return (
-    <>
-      <h1 style={{ textAlign: "center" }}>{status()}</h1>
-      <hr />
-    </>
+    <h1 style={{ textAlign: "center" }}>
+      {props.value > 25 ? message[0] : message[1]}
+    </h1>
   );
 };
 
