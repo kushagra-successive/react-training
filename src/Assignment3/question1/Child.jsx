@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
 import { LoginProvider } from "./Parent";
+import { logIn, logOut, pleaseLogIn, welcome } from "../data.js";
+
 const Child = () => {
   const { val, state, setVal, setState } = useContext(LoginProvider);
 
@@ -19,9 +21,9 @@ const Child = () => {
           }
         }}
       >
-        {state ? "LogOut" : "LogIn"}
+        {state ? logOut : logIn}
       </button>
-      <h2>{state ? `Welcome,${val}` : "Please log in."}</h2>
+      <h2>{state ? `${welcome},${val}` : pleaseLogIn}</h2>
     </div>
   );
 };

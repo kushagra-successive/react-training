@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import { LoginProvider } from "./Parent2";
 import { ThemeProvider } from "./Parent2";
 import styles from "../assignment2.module.css";
+import { logIn, logOut, pleaseLogIn, welcome, dark, light } from "../data.js";
+
 const Child2 = () => {
   const { val, state, setVal, setState } = useContext(LoginProvider);
   const { theme, setTheme } = useContext(ThemeProvider);
@@ -25,12 +27,10 @@ const Child2 = () => {
           }
         }}
       >
-        {state ? "LogOut" : "LogIn"}
+        {state ? logOut : logIn}{" "}
       </button>
-      <h2>{state ? `Welcome,${val}` : "Please log in."}</h2>
-      <button onClick={() => setTheme(!theme)}>
-        {theme ? "Dark" : "Light"}
-      </button>
+      <h2>{state ? `${welcome},${val}` : pleaseLogIn}</h2>
+      <button onClick={() => setTheme(!theme)}>{theme ? dark : light}</button>
     </div>
   );
 };

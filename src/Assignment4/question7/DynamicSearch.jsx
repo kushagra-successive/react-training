@@ -1,21 +1,6 @@
 import { useEffect, useState } from "react";
-
+import { itemArray } from "../data";
 const DynamicSearch = () => {
-  const itemArray = [
-    "banana",
-    "blue",
-    "new",
-    "bamboo",
-    "next",
-    "back",
-    "kite",
-    "king",
-    "kill",
-    "off",
-    "office",
-    "on",
-    "onclick",
-  ];
   const [items, setItems] = useState(itemArray);
   const [search, setSearch] = useState("");
   const [filterArray, setfilteredArray] = useState(itemArray);

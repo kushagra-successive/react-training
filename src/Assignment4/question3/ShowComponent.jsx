@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import UI from "./UI";
+import { show } from "../data";
 const ShowComponent = () => {
   const [state, setState] = useState("");
   const [isClick, setIsClick] = useState(false);
@@ -22,7 +23,7 @@ const ShowComponent = () => {
       >
         Enter
       </button>
-      {isClick && state === "show" ? <UI /> : null}
+      {isClick && state === show ? <UI /> : null}
     </div>
   );
 };

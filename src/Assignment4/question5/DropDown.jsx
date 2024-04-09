@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { fruits } from "../data";
 const DropDown = () => {
-  const [select, setSelect] = useState("Fruits");
+  const [select, setSelect] = useState(fruits);
   return (
     <div>
       <select value={select} onChange={(e) => setSelect(e.target.value)}>

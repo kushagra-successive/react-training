@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import  { createContext, useState } from "react";
 import Child from "./Child.jsx";
 export const LoginProvider = createContext();
 const Parent = () => {

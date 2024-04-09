@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
+import { nameMock, passwordMock, invalid } from "../data";
 const MainPage = () => {
   const navigate = useNavigate();
   const [name, setName] = useState("");
@@ -7,10 +8,9 @@ const MainPage = () => {
   const [status, setStatus] = useState("");
 
   const authentication = () => {
-    if (name === "Kushagra Bajpai" && password === "Kush1234")
-      navigate("/about");
+    if (name === nameMock && password === passwordMock) navigate("/about");
     else {
-      setStatus("Invalid Credentials");
+      setStatus(invalid);
       setPassword("");
       setName("");
     }

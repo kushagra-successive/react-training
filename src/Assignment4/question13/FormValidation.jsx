@@ -3,15 +3,8 @@ import styles from "../assignment4.module.css";
 import { Button } from "@mui/material";
 import { useFormik } from "formik";
 import { signUpSchema } from "../question13/schema";
-
+import { initialValues, filled } from "../data";
 const FormValidation = () => {
-  const initialValues = {
-    UserName: "",
-    Email: "",
-    PhoneNo: "",
-    Password: "",
-    ConfirmPassword: "",
-  };
   //touched is when we are are at particular box it will return boolean value .
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
     useFormik({
@@ -29,8 +22,9 @@ const FormValidation = () => {
         <div>
           <TextField
             label="Username"
-            variant="filled"
+            variant={filled}
             value={values.UserName}
+            s
             name="UserName"
             autoComplete="off"
             onChange={handleChange}
@@ -43,7 +37,7 @@ const FormValidation = () => {
         <div>
           <TextField
             label="Email"
-            variant="filled"
+            variant={filled}
             value={values.Email}
             name="Email"
             autoComplete="off"
@@ -55,7 +49,7 @@ const FormValidation = () => {
         <div>
           <TextField
             label="PhoneNumber"
-            variant="filled"
+            variant={filled}
             value={values.PhoneNo}
             name="PhoneNo"
             autoComplete="off"
@@ -68,7 +62,7 @@ const FormValidation = () => {
         <div>
           <TextField
             label="Password"
-            variant="filled"
+            variant={filled}
             value={values.Password}
             name="Password"
             type="password"
@@ -83,7 +77,7 @@ const FormValidation = () => {
         <div>
           <TextField
             label="ConfirmPassword"
-            variant="filled"
+            variant={filled}
             type="password"
             value={values.ConfirmPassword}
             name="ConfirmPassword"

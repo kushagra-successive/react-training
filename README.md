@@ -1,30 +1,36 @@
 ## Description
 
-1.Create a functional component named Greeting that displays a simple "Hello, React!" message on the screen.
-Import and render the Greeting component in the App component.
+1.Create a React component with an input field. Implement it as a controlled component where the input value is controlled by the component's state. When the user types into the input field, the component's state should update accordingly.
 
-2.Create a functional component named UserCard that accepts the following props: name, email, and avatarURL.
-Use the props to display the user's name, email, and an image (avatar) in the UserCard component.
-Create multiple instances of the UserCard component with different user data.
+2.Build a form that includes various input fields like text inputs, checkboxes, and radio buttons. Ensure that each input is a controlled component. When the user submits the form, log the form data to the console.
 
-3.Create a functional component named Weather that accepts a prop called temperature (a number).
-Display a message like "It's sunny today!" if the temperature is above 25°C and "It's cold today!" if the temperature is below 10°C.
-Import and render the Weather component in the App component with different temperature values.
+3.Create a component with controlled input field and a button. When the user enters a specific value into the input (e.g., "show"), a new component should be rendered below the input, displaying a message. Otherwise, nothing should be displayed.
 
-4.Create a functional component named Counter that displays a count and two buttons: "Increment" and "Decrement".
-Implement event handlers for the "Increment" and "Decrement" buttons to increase and decrease the count.
-Display the updated count on the screen.
+4.Build a registration form with two password fields. Implement controlled components for both password inputs. Add a validation rule to ensure that the two passwords match before allowing the form submission.
 
-5.Create a functional component named TaskList that accepts an array of task names as a prop.
-Use the map function to render each task name as a list item.
-Import and render the TaskList component in the App component with an array of tasks.
+5.Construct a select dropdown menu with multiple options. Control the selected option using state. When an option is selected, display a message showing the selected value.
 
-6.Create a functional component named Button that accepts props for text and color.
-Style the button using inline styles or CSS classes based on the color prop.
+6.Build a simple todo list component with a text input for adding new tasks and a list to display them. Use controlled components to handle the input and update the list of tasks.
+
+7.Design a search filter component that consists of an input field. As the user types into the input, use controlled components to filter a list of items displayed below. The list should dynamically update to show only items matching the search query.
+
+8.Create a temperature converter component with two input fields: one for Celsius and one for Fahrenheit. Implement controlled components for both inputs. When the user enters a value in one input, the other input should update with the converted temperature.
+
+9.Implement a responsive sidebar navigation using Material-UI's Drawer component. Include links that allow users to navigate between different sections of your web app.
+
+10.Create a form with Material-UI text fields and implement form validation. Ensure that error messages are displayed when the user enters invalid data.
+
+11.Design a modal dialog component using Material-UI's Dialog component. Use it to display additional information or capture user input within your app.
+
+12.Build a data table using Material-UI's Table component. Populate the table with sample data and add features like sorting and pagination.
+
+13.install Yup. Define a Yup validation schema for a more complex form. Include validation rules for fields like email, password, and phone number. Ensure that error messages are displayed for each validation rule.
+Implement real-time validation feedback using Material-UI's TextField component. Show validation errors as the user types, and clear the errors when the input is valid.(Use Formik as well)
+
+14.Create a new form and Implement form submission handling. Ensure that the form cannot be submitted if there are validation errors. Display a summary of errors if the user attempts to submit an invalid form.
 
 ## Learning
 
-1.JSX and Fragments
-2.Functional Component
-3.Props
-4.Hooks and UseState
+1.How to use MUI - textfields,buttons,drawer
+2.Form handling using Formik
+3.Form validation using Yup

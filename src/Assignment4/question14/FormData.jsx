@@ -3,29 +3,23 @@ import styles from "../assignment4.module.css";
 import { Button } from "@mui/material";
 import { useFormik } from "formik";
 import { signUpSchema } from "../question14/schema";
-import { useState } from "react";
-
+import { useEffect, useState } from "react";
+import { initialValues, filled } from "../data";
 const FormValidation = () => {
   const [status, setStatus] = useState(false);
-  const [valueObject, setValue] = useState({});
 
-  const initialValues = {
-    UserName: "",
-    Email: "",
-    PhoneNo: "",
-    Password: "",
-    ConfirmPassword: "",
-  };
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
     useFormik({
       initialValues,
       validationSchema: signUpSchema,
       onSubmit: (values, action) => {
         setStatus(true);
-        setValue(values);
         action.resetForm();
       },
     });
+  useEffect(() => {
+    console.log(errors);
+  }, [errors, status]);
   // We are destructuring values from useFormik where values field has what we inserted into an object name initialValues
   return (
     <form onSubmit={handleSubmit}>
@@ -33,7 +27,7 @@ const FormValidation = () => {
         <div>
           <TextField
             label="Username"
-            variant="filled"
+            variant={filled}
             value={values.UserName}
             name="UserName"
             autoComplete="off"
@@ -47,7 +41,7 @@ const FormValidation = () => {
         <div>
           <TextField
             label="Email"
-            variant="filled"
+            variant={filled}
             value={values.Email}
             name="Email"
             autoComplete="off"
@@ -59,7 +53,7 @@ const FormValidation = () => {
         <div>
           <TextField
             label="PhoneNumber"
-            variant="filled"
+            variant={filled}
             value={values.PhoneNo}
             name="PhoneNo"
             autoComplete="off"
@@ -71,7 +65,7 @@ const FormValidation = () => {
         <div>
           <TextField
             label="Password"
-            variant="filled"
+            variant={filled}
             type="password"
             value={values.Password}
             name="Password"
@@ -87,7 +81,7 @@ const FormValidation = () => {
           <TextField
             label="ConfirmPassword"
             type="password"
-            variant="filled"
+            variant={filled}
             value={values.ConfirmPassword}
             name="ConfirmPassword"
             autoComplete="off"
@@ -102,26 +96,6 @@ const FormValidation = () => {
           SUBMIT
         </Button>
       </div>
-      {status && (
-        <div>
-          <h2>Form Values:</h2>
-          <p>
-            <strong>Username:</strong> {valueObject.UserName}
-          </p>
-          <p>
-            <strong>Email:</strong> {valueObject.Email}
-          </p>
-          <p>
-            <strong>Phone Number:</strong> {valueObject.PhoneNo}
-          </p>
-          <p>
-            <strong>Password:</strong> {valueObject.Password}
-          </p>
-          <p>
-            <strong>Confirm Password:</strong> {valueObject.ConfirmPassword}
-          </p>
-        </div>
-      )}
     </form>
   );
 };

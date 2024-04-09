@@ -5,17 +5,11 @@ import Button from "@mui/material/Button";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
-
 import ListItemText from "@mui/material/ListItemText";
 import { Link, Outlet } from "react-router-dom";
-const SideBar = () => {
-  const menuItems = [
-    { menu: "Charts", link: "/charts" },
-    { menu: "Setting", link: "/setting" },
-    { menu: "AboutUS", link: "/about" },
-    { menu: "LogOut", link: "/logout" },
-  ];
+import { menuItems } from "../data";
 
+const SideBar = () => {
   const [open, setOpen] = React.useState(false);
 
   const DrawerList = (

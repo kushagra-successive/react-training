@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { login, cantLogin } from "../data";
 const PasswordMatch = () => {
   const [passwordOne, setpasswordOne] = useState("");
   const [passwordTwo, setpasswordTwo] = useState("");
@@ -28,7 +28,7 @@ const PasswordMatch = () => {
         onChange={(e) => setpasswordTwo(e.target.value)}
       />
       <button onClick={check}>Login</button>
-      {state   ? `Login` : `CantLogin`}
+      {state ? login : cantLogin}
     </form>
   );
 };

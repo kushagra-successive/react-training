@@ -1,6 +1,8 @@
 import { TextField, Button } from "@mui/material";
 import styles from "../assignment4.module.css";
 import { useState } from "react";
+import { nameMock, passwordMock } from "../data";
+import { valid, inValid } from "../data";
 const TextFields = () => {
   const [click, setClick] = useState(false);
   const [password, setPassword] = useState("");
@@ -9,7 +11,7 @@ const TextFields = () => {
 
   const validation = () => {
     setClick(true);
-    if (password === "Kush1234" && name === "Kushagra") {
+    if (password === passwordMock && name === nameMock) {
       setMatch(true);
     } else {
       setMatch(false);
@@ -36,7 +38,7 @@ const TextFields = () => {
       <Button variant="contained" onClick={validation}>
         SUBMIT
       </Button>
-      <h1>{click ? (click && match ? "valid" : "Invalid") : null}</h1>
+      <h1>{click ? (click && match ? valid : inValid) : null}</h1>
     </form>
   );
 };
