@@ -1,36 +1,45 @@
 ## Description
 
-1.Create a React component with an input field. Implement it as a controlled component where the input value is controlled by the component's state. When the user types into the input field, the component's state should update accordingly.
+use useNavigate from react-router-dom to re-direct to other pages in some questions
+1.create two components: a parent component that acts as a provider and a child component that consumes the context.
+Create a context to manage a user's authentication status (logged in or out).
+Implement a login button in the child component that, when clicked, updates the authentication status in the context to "logged in."
+Display a message in the child component based on the user's authentication status. If the user is logged in, show "Welcome, [username]!" Otherwise, display "Please log in."
 
-2.Build a form that includes various input fields like text inputs, checkboxes, and radio buttons. Ensure that each input is a controlled component. When the user submits the form, log the form data to the console.
+2.Extend the previous application to demonstrate the use of nested contexts.
+Create a new context to manage user preferences (e.g., theme preference).
+Modify the parent component to provide both the authentication and preferences contexts.
+Create a child component that consumes both contexts.
+Allow the user to change their theme preference (light/dark) using a button in the child component.
+Display the theme preference in the UI and adjust the component's styling accordingly.
 
-3.Create a component with controlled input field and a button. When the user enters a specific value into the input (e.g., "show"), a new component should be rendered below the input, displaying a message. Otherwise, nothing should be displayed.
+3.creat pages: Home and About.
+Implement routing using React Router DOM.
+Create navigation links to switch between the Home and About pages.
+Display appropriate content on each page.
+Add a "404 Not Found" page for any invalid routes.
 
-4.Build a registration form with two password fields. Implement controlled components for both password inputs. Add a validation rule to ensure that the two passwords match before allowing the form submission.
+4.Enhance the previous application by adding protected routes that require authentication.
+Create a login page with a form that accepts a username and password.
+Implement authentication logic (e.g., hardcode a username and password for now).
+Secure the About page so that it can only be accessed by authenticated users.
+Redirect unauthenticated users to the login page.
+Display a message on the Home page welcoming the authenticated user.
 
-5.Construct a select dropdown menu with multiple options. Control the selected option using state. When an option is selected, display a message showing the selected value.
+5.Extend the application to include nested routes for a more complex user interface.
+Create a new section of your application (e.g., a Dashboard) with multiple sub-pages (e.g., Dashboard, Profile, Settings).
+Implement nested routing within this section using nested routes.
+Add navigation links to switch between the sub-pages within the Dashboard section.
+Customize the content displayed on each sub-page.
 
-6.Build a simple todo list component with a text input for adding new tasks and a list to display them. Use controlled components to handle the input and update the list of tasks.
-
-7.Design a search filter component that consists of an input field. As the user types into the input, use controlled components to filter a list of items displayed below. The list should dynamically update to show only items matching the search query.
-
-8.Create a temperature converter component with two input fields: one for Celsius and one for Fahrenheit. Implement controlled components for both inputs. When the user enters a value in one input, the other input should update with the converted temperature.
-
-9.Implement a responsive sidebar navigation using Material-UI's Drawer component. Include links that allow users to navigate between different sections of your web app.
-
-10.Create a form with Material-UI text fields and implement form validation. Ensure that error messages are displayed when the user enters invalid data.
-
-11.Design a modal dialog component using Material-UI's Dialog component. Use it to display additional information or capture user input within your app.
-
-12.Build a data table using Material-UI's Table component. Populate the table with sample data and add features like sorting and pagination.
-
-13.install Yup. Define a Yup validation schema for a more complex form. Include validation rules for fields like email, password, and phone number. Ensure that error messages are displayed for each validation rule.
-Implement real-time validation feedback using Material-UI's TextField component. Show validation errors as the user types, and clear the errors when the input is valid.(Use Formik as well)
-
-14.Create a new form and Implement form submission handling. Ensure that the form cannot be submitted if there are validation errors. Display a summary of errors if the user attempts to submit an invalid form.
+6.Create a list of items (e.g., products, articles) in your application.
+Implement dynamic routing to display details for each item when clicked.
+Create a route parameter that represents the item's ID in the URL (e.g., "/products/:id").
+Fetch item details based on the route parameter and display them on the detail page.
+Add a "Go Back" button on the detail page to return to the list.
 
 ## Learning
 
-1.How to use MUI - textfields,buttons,drawer
-2.Form handling using Formik
-3.Form validation using Yup
+1.Routing
+2.Nested Routing
+3.Using Link to naviagate on subpages.
