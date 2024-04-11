@@ -39,3 +39,4 @@ export const copy = "copy";
 
 export const completed = "Completed 😃";
 export const green = "green";
+export const notification = "Successive Digital 🤎";
