@@ -5,6 +5,7 @@ const Toggle = () => {
   return (
     <div>
       <button onClick={() => setStatus(!status)}>Toggle</button>
+      <h1>Modal</h1>
       {status ? <ModalCreation status={status} setStatus={setStatus} /> : null}
     </div>
   );

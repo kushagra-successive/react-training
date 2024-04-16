@@ -1,4 +1,4 @@
-import styles from "../assignment5.module.css";
+import styles from "./Assignment6.module.css";
 const Modal = ({ status, setStatus }) => {
   return (
     <div className={styles.divUpper} onClick={() => setStatus(!status)}>
