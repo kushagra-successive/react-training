@@ -10,6 +10,7 @@ test("change event testing", () => {
   fireEvent.change(nameTest, { target: { value: "testUser" } });
   fireEvent.change(passTest, { target: { value: "testPass" } });
 
+  
   expect(nameTest.value).toBe("testUser");
   expect(passTest.value).toBe("testPass");
 });
@@ -28,5 +29,4 @@ test("submit button works correctly", () => {
 
   // Assert that the state has been updated correctly
   expect(screen.getByText("testUser testPassword")).toBeInTheDocument();
-
 });

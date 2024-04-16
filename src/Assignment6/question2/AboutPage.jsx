@@ -11,7 +11,7 @@ const AboutPage = () => {
   return (
     <div>
       <h1>ABOUT PAGE</h1>
-      <button onClick={() => navigate("/order")}>order</button>
+
       {users.map((element) => {
         return <Link to={`/about/${element.id}`}>{element.name}</Link>;
       })}
