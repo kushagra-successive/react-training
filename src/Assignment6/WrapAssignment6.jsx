@@ -2,10 +2,8 @@ import Practise from "./question3/Practise";
 import LoginForm from "./question4/LoginForm";
 import LazyLoad from "./question1/LazyLoad";
 import LazyLoadTwo from "./question2/LazyLoadTwo";
-// import { createContext } from "react";
 import DataProvider from "./question5/DataProvider";
-// export const User1 = createContext();
-// export const User2 = createContext();
+import Toggle from "./question6/Toggle";
 
 const WrapAssignment6 = () => {
   return (
@@ -19,6 +17,8 @@ const WrapAssignment6 = () => {
       <LoginForm />
       <hr />
       <DataProvider />
+      <hr />
+      <Toggle />
     </div>
   );
 };
