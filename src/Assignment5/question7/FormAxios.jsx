@@ -6,6 +6,7 @@ const FormAxios = () => {
     title: "",
     completed: "",
   });
+  const [result, setResult] = useState({});
   const handleChange = (e) => {
     const val = e.target.value;
     setData({
@@ -13,8 +14,11 @@ const FormAxios = () => {
       [e.target.name]: val,
     });
   };
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
     axios.post(url, data).then((response) => {
+      setResult(response.data);
       console.log(response.data, response.status);
     });
   };

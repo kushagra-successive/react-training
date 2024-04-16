@@ -1,45 +1,40 @@
-## Description
+Description
 
-use useNavigate from react-router-dom to re-direct to other pages in some questions
-1.create two components: a parent component that acts as a provider and a child component that consumes the context.
-Create a context to manage a user's authentication status (logged in or out).
-Implement a login button in the child component that, when clicked, updates the authentication status in the context to "logged in."
-Display a message in the child component based on the user's authentication status. If the user is logged in, show "Welcome, [username]!" Otherwise, display "Please log in."
+1.Create a React component that fetches data from a public API (e.g., JSONPlaceholder) and displays it on the page. Use the fetch function to make the request.
 
-2.Extend the previous application to demonstrate the use of nested contexts.
-Create a new context to manage user preferences (e.g., theme preference).
-Modify the parent component to provide both the authentication and preferences contexts.
-Create a child component that consumes both contexts.
-Allow the user to change their theme preference (light/dark) using a button in the child component.
-Display the theme preference in the UI and adjust the component's styling accordingly.
+2.Implement error handling for the fetch request. Display an error message if the request fails and provide a way for the user to retry the request.
 
-3.creat pages: Home and About.
-Implement routing using React Router DOM.
-Create navigation links to switch between the Home and About pages.
-Display appropriate content on each page.
-Add a "404 Not Found" page for any invalid routes.
+3.Add a loading indicator (e.g., a spinner) to the component. Display it while the data is being fetched and hide it once the data is loaded.
 
-4.Enhance the previous application by adding protected routes that require authentication.
-Create a login page with a form that accepts a username and password.
-Implement authentication logic (e.g., hardcode a username and password for now).
-Secure the About page so that it can only be accessed by authenticated users.
-Redirect unauthenticated users to the login page.
-Display a message on the Home page welcoming the authenticated user.
+4.Fetch a large dataset from an API and implement pagination. Display a limited number of items per page and provide navigation controls to load more pages of data.
 
-5.Extend the application to include nested routes for a more complex user interface.
-Create a new section of your application (e.g., a Dashboard) with multiple sub-pages (e.g., Dashboard, Profile, Settings).
-Implement nested routing within this section using nested routes.
-Add navigation links to switch between the sub-pages within the Dashboard section.
-Customize the content displayed on each sub-page.
+5.Create a React component that fetches data from a public API (e.g., JSONPlaceholder) using Axios and displays it on the page.
 
-6.Create a list of items (e.g., products, articles) in your application.
-Implement dynamic routing to display details for each item when clicked.
-Create a route parameter that represents the item's ID in the URL (e.g., "/products/:id").
-Fetch item details based on the route parameter and display them on the detail page.
-Add a "Go Back" button on the detail page to return to the list.
+6.Modify the previous assignment to implement error handling using Axios. Display an error message if the request fails and provide a way for the user to retry the request.
+
+7.Create a form in your React component that allows the user to input data (e.g., a post title and content). Use Axios to send a POST request to an API endpoint, posting the user's data.
+
+8.set up a GraphQL client library like Apollo Client. Create a simple component that uses the client to fetch and display data from a GraphQL API.
+
+9.Create a React component that makes GraphQL queries to retrieve a list of items (e.g., a list of books, movies, or products) from a GraphQL API. Implement pagination for large datasets and display the data in a user-friendly way.
+
+10.Extend the previous assignment to allow users to perform mutations, such as adding, updating, or deleting items. Implement a form and mutation queries to interact with the GraphQL API.
+
+11.Demonstrate how to handle errors in GraphQL queries and mutations. Create a React component that displays error messages when GraphQL requests fail and provides a way for users to retry the request.
+
+12.Create a reusable Button component in React that accepts props for different styles (e.g., primary, secondary, danger) and click handlers. Demonstrate how to use this component in a sample application.
+
+13.Design and implement a Modal component in React. Allow customization of the modal content and provide options to open, close, and toggle the modal. Use this component to display various types of content.
+
+14.Create an HOC named withAuth that restricts access to a specific component to authenticated users only. Implement this HOC on a sample component and demonstrate how it protects routes.
+
+15.Build an HOC called withLogger that logs the events of a component (e.g., mounting, unmounting, updating). Apply this HOC to a component and display the logs in the browser console.
+
+16.Develop an HOC named withDataFetching that fetches data from an API and passes it as props to a component. Use this HOC to retrieve and display data in a component.
 
 ## Learning
 
-1.Routing
-2.Nested Routing
-3.Using Link to naviagate on subpages.
+1.Fetch data from APIs
+2.Fetch data from Axios
+3.Error Handling in Axios
+4.HOC
