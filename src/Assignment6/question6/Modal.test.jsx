@@ -8,4 +8,6 @@ test("Testing the modal", () => {
   fireEvent.click(testSubmit);
   expect(screen.getByText("I am inside the Modal")).toBeInTheDocument();
   expect(screen.getByText(/Hello world !/i)).toBeInTheDocument();
+  fireEvent.click(testSubmit);
+  expect(screen.queryByText("I am inside the Modal")).not.toBeInTheDocument();
 });
