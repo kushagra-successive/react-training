@@ -1,36 +1,161 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Description
 
-1.Create a React component with an input field. Implement it as a controlled component where the input value is controlled by the component's state. When the user types into the input field, the component's state should update accordingly.
+1.Create a functional component called Counter.
+Inside the component, use the useState hook to manage a state variable named count initialized to 0.
+Render the current value of count in a <p> element.
+Add two buttons, one for incrementing the count and another for decrementing it.
+When the user clicks on the buttons, update the count state accordingly.
 
-2.Build a form that includes various input fields like text inputs, checkboxes, and radio buttons. Ensure that each input is a controlled component. When the user submits the form, log the form data to the console.
+2.Create a functional component called PersonForm.
+Use the useState hook to manage three state variables: firstName, lastName, and age, all initialized to empty strings.
+Render three input fields for the user to enter their first name, last name, and age.
+As the user types, update the respective state variables.
+Display the entered information below the input fields.
 
-3.Create a component with controlled input field and a button. When the user enters a specific value into the input (e.g., "show"), a new component should be rendered below the input, displaying a message. Otherwise, nothing should be displayed.
+3.Create a functional component called ToDoList.
+Use the useState hook to manage a state variable named todos, initialized as an empty array.
+Render a list of todos using the map function.
+Each todo should have a checkbox to mark it as completed and a delete button to remove it from the list.
+Use the useState hook to manage the state of each todo item (completed or not).
 
-4.Build a registration form with two password fields. Implement controlled components for both password inputs. Add a validation rule to ensure that the two passwords match before allowing the form submission.
+4.Create a functional component called RandomNumberGenerator.
+Use the useState hook to manage a state variable named randomNumber, initialized to a random number between 1 and 100.
+Render the current value of randomNumber.
+Add a button that generates a new random number and updates the state when clicked.
 
-5.Construct a select dropdown menu with multiple options. Control the selected option using state. When an option is selected, display a message showing the selected value.
+5.Create a functional component called CounterWithStep.
+Use the useState hook to manage a state variable named count initialized to 0.
+Render the current value of count in a <p> element.
+Add two buttons, one for incrementing the count and another for decrementing it.
+Add an input field where the user can specify a step value.
+Update the count using the specified step value when the buttons are clicked.
 
-6.Build a simple todo list component with a text input for adding new tasks and a list to display them. Use controlled components to handle the input and update the list of tasks.
+6.Create a functional component called Clock.
+Use the useState hook to manage a state variable named time initialized to the current time.
+Use the useEffect hook to update the time state every second to display the current time.
+Render the current time in a <p> element.
+When the component unmounts, clear the interval to stop updating the time.
 
-7.Design a search filter component that consists of an input field. As the user types into the input, use controlled components to filter a list of items displayed below. The list should dynamically update to show only items matching the search query.
+7.Create a functional component called Notification.
+Use the useState hook to manage a state variable named message initialized to an empty string.
+Use the useEffect hook to show a notification message for 5 seconds whenever the message state changes.
+Render the notification message in a <div> element.
+After 5 seconds, clear the message to hide the notification.
 
-8.Create a temperature converter component with two input fields: one for Celsius and one for Fahrenheit. Implement controlled components for both inputs. When the user enters a value in one input, the other input should update with the converted temperature.
+8.Use the useEffect hook to manage the current slide and transition.
+Add few images atleast 10 in public folder to populate the slideshow.
+Allow users to pause, play the slideshow.
+Include a time interval option to control the automatic slideshow progression.
 
-9.Implement a responsive sidebar navigation using Material-UI's Drawer component. Include links that allow users to navigate between different sections of your web app.
+9.Create a theme switcher application using the useContext hook.
+Create a context to manage the current theme (e.g., light or dark).
+Provide a button to toggle between the two themes.
+Use the useContext hook to access the theme value and update it.
+Apply different styles and colors to components based on the selected theme.
 
-10.Create a form with Material-UI text fields and implement form validation. Ensure that error messages are displayed when the user enters invalid data.
+10.Develop a language switcher application using the useContext hook.
+Create a context to manage the current language (e.g., English or Spanish).
+Provide buttons to switch between languages.
+Use the useContext hook to access the current language value.
+Display different language versions of the application's content.
 
-11.Design a modal dialog component using Material-UI's Dialog component. Use it to display additional information or capture user input within your app.
+11.Build a shopping cart application using the useContext hook.
+Set up a context to manage the state of the shopping cart.
+Create components to display products and a shopping cart.
+Use the useContext hook to access the cart state and update it.
+Allow users to add and remove items from the cart.
+Display the total price of items in the cart.
 
-12.Build a data table using Material-UI's Table component. Populate the table with sample data and add features like sorting and pagination.
+12.Create a simple voting application using the useReducer hook.
+Set up a reducer to manage the votes for different options.
+Create buttons representing voting options.
+Use the useReducer hook to access the votes state and dispatch actions.
+Allow users to vote for their preferred options.
+Display the current vote count for each option.
 
-13.install Yup. Define a Yup validation schema for a more complex form. Include validation rules for fields like email, password, and phone number. Ensure that error messages are displayed for each validation rule.
-Implement real-time validation feedback using Material-UI's TextField component. Show validation errors as the user types, and clear the errors when the input is valid.(Use Formik as well)
+13.create two components: Parent and Child.
+In the Parent component, maintain a count state.
+Pass a callback function from the Parent to the Child that increments the count.
+Use the useCallback hook in the Parent to memoize the callback function with a dependency on the count state.
+Display the count in the Child component.
+Implement a button in the Child component that resets the count to zero when clicked.
 
-14.Create a new form and Implement form submission handling. Ensure that the form cannot be submitted if there are validation errors. Display a summary of errors if the user attempts to submit an invalid form.
+14.create a component that displays a list of tasks.
+Each task has a "Complete" button.
+Implement a feature where clicking the "Complete" button marks the task as completed.
+Use the useCallback hook to create dynamic callback functions for each task.
+Ensure that clicking the "Complete" button for one task doesn't trigger unnecessary re-renders for other tasks.
+
+15.Create a functional component named StudentList that displays a list of student names..
+Define an array of student names as a constant within the component.
+Use the useMemo hook to memoize the list of student names.
+Render the list of student names on the screen.
+Include a button that, when clicked, appends a new student name to the list.
+
+16.Create a functional component named EmployeeSalary that displays the average salary of a list of employees.
+Define an array of employee objects, where each object has a name and salary property.
+Use the useMemo hook to calculate the average salary of employees.
+Ensure that the useMemo hook has a dependency on the employee data so that it recalculates when the employee data changes.
+Render the average salary on the screen.
+Include a button that, when clicked, updates the employee data with new salaries.
+
+17.Build a custom hook named useClipboard for copying text to the clipboard.
+Implement a useClipboard hook that takes a text value as a parameter.
+Use the document.execCommand API to copy the provided text to the clipboard.
+Return a success status and methods to trigger the copying action.
+Develop a component that uses the useClipboard hook to provide a copy button for text.
+
+18.Design a custom hook named useLocalStorage to interact with local storage.
+Create a useLocalStorage hook that allows storing and retrieving data from local storage.
+Implement methods for setting, getting, and removing data using the hook.
+Utilize the localStorage API within the hook to manage data.
+Develop a component that uses the useLocalStorage hook to manage user preferences.
+
+19.Build a custom hook named useTimer for creating countdown timers.
+Create a useTimer hook that takes a countdown duration as a parameter.
+Use setInterval to decrement the timer at regular intervals.
+Return the current timer value and methods to start, pause, and reset the timer.
+Develop a component that utilizes the useTimer hook to display and control a countdown.
 
 ## Learning
 
-1.How to use MUI - textfields,buttons,drawer
-2.Form handling using Formik
-3.Form validation using Yup
+1.JSX and Fragments
+2.Functional Component
+3.Props
+4.useState hook
+5.useEffect hook
+6.useCallback hook
+7.useContext hook
+8.useMemo hook
+9.Custom hook
+10.useReducer hook
