@@ -23,7 +23,6 @@ Import and render the TaskList component in the App component with an array of t
 Style the button using inline styles or CSS classes based on the color prop.
 
 ## Learning
-
 1.JSX and Fragments
 2.Functional Component
 3.Props
