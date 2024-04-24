@@ -1,4 +1,4 @@
-## Description
+Description
 
 1.Create a React application that has multiple pages represented as components. Implement lazy loading for these components using React's lazy and Suspense features. When a user navigates to a particular page, the component should be loaded lazily, improving the application's initial loading time.
 
@@ -12,8 +12,4 @@
 
 6.Create a React component (Modal) that displays a modal dialog with content. Users can open and close the modal. Write tests to check if the modal opens and closes when triggered.
 
-## Learning
 
-1.Lazy Loading
-2.Error boundaries
-3.Testing
