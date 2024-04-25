@@ -1,7 +1,5 @@
 import React from "react";
-import Assignment1 from "./Assignment1/Assignment_1";
 import Wrap from "./Assignment2/Wrap";
-
 import "./App.css";
 
 function App() {
